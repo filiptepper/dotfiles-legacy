@@ -1,0 +1,16 @@
+# rvm-install added line:
+if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
+
+fpath=(~/.zsh/functions $fpath)
+autoload -U ~/.zsh/functions/*(:t)
+
+. ~/.zsh/environment
+. ~/.zsh/aliases
+. ~/.zsh/completion
+
+HISTSIZE=1000
+SAVEHIST=1000
+HISTFILE=~/.history
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
+setopt EXTENDED_HISTORY

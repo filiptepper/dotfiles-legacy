@@ -1,0 +1,16 @@
+export EDITOR="mate -w"
+export GREP_OPTIONS="--color=auto"
+
+setopt auto_cd
+setopt prompt_subst
+unsetopt BEEP
+
+autoload colors; colors;
+export LSCOLORS="Exfxhxhxbxegedabagacad"
+
+function git_prompt_info() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  echo "%{$fg[red]%}${ref#refs/heads/}%{$reset_color%} "
+}
+
+PROMPT='%{$fg[yellow]%}%~%{$reset_color%} $(git_prompt_info)%{$reset_color%}%B$%b '
