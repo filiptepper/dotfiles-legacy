@@ -1,5 +1,6 @@
 export EDITOR="mate -w"
 export GREP_OPTIONS="--color=auto"
+export NODE_PATH="/usr/local/lib/node"
 
 setopt auto_cd
 setopt prompt_subst
