@@ -1,4 +1,4 @@
-alias autofeature="export AUTOFEATURES=true && autotest"
-alias autospec="export AUTOFEATURES=false && autotest"
+alias autofeature="export AUTOFEATURE=true && autotest"
+alias autospec="export AUTOFEATURE=false && autotest"
 
 alias ls="ls -G"
