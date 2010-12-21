@@ -1,4 +1,6 @@
 alias autofeature="export AUTOFEATURE=true && autotest"
 alias autospec="export AUTOFEATURE=false && autotest"
 
+alias feature="cucumber -r features"
+
 alias ls="ls -G"
