@@ -1,6 +1,16 @@
 alias autofeature="export AUTOFEATURE=true && autotest"
 alias autospec="export AUTOFEATURE=false && autotest"
 
-alias feature="cucumber -r features"
+alias feature="bundle exec cucumber -r features"
+
+alias gb="git checkout -b"
+alias gc="git checkout"
+alias gf="git fetch"
+alias gm="git merge"
+alias gp="git push origin master"
+alias gr="git rebase origin/master"
+alias gri="git rebase -i origin/master"
 
 alias ls="ls -G"
+
+show () { mate `bundle show $1` }
