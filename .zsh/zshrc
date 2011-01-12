@@ -8,6 +8,8 @@ autoload -U ~/.zsh/functions/*(:t)
 . ~/.zsh/aliases
 . ~/.zsh/completion
 
+if [[ -s ~/.zsh/local ]] ; then source ~/.zsh/local ; fi
+
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.history
