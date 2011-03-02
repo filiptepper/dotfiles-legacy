@@ -13,4 +13,6 @@ alias gri="git rebase -i origin/master"
 
 alias ls="ls -G"
 
+alias td="tail -f ./log/development.log"
+
 show () { mate `bundle show $1` }
