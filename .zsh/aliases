@@ -3,13 +3,16 @@ alias autospec="export AUTOFEATURE=false && autotest"
 
 alias feature="bundle exec cucumber -r features"
 
-alias gb="git checkout -b"
+alias gbd="git branch -d"
 alias gc="git checkout"
+alias gcam="git commit -am"
+alias gcb="git checkout -b"
 alias gf="git fetch"
 alias gm="git merge"
-alias gp="git push origin master"
-alias gr="git rebase origin/master"
-alias gri="git rebase -i origin/master"
+alias gp="git push"
+alias grom="git rebase origin/master"
+alias griom="git rebase -i origin/master"
+alias gs="git status"
 
 alias ls="ls -G"
 
