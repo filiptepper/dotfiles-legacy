@@ -3,6 +3,7 @@ alias autospec="export AUTOFEATURE=false && autotest"
 
 alias feature="bundle exec cucumber -r features"
 
+alias gb="git branch"
 alias gbd="git branch -d"
 alias gc="git checkout"
 alias gcam="git commit -am"
