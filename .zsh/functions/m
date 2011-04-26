@@ -1,0 +1,14 @@
+# Usage: m application.rb:123 # open file application.rb, go to line 123
+
+file=$1
+file=("${(s/:/)file}")
+
+echo $file
+if [ "1" == "${#file[*]}" ] ; then
+  `mate $file[1]`
+elif [ "2" = "${#file[*]}" ] ; then
+  echo "mate $file[1] --line $file[2]"
+  `mate $file[1] --line $file[2]`
+else
+  mate
+fi
