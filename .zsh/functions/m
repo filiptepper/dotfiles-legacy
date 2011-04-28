@@ -7,7 +7,6 @@ echo $file
 if [ "1" == "${#file[*]}" ] ; then
   `mate $file[1]`
 elif [ "2" = "${#file[*]}" ] ; then
-  echo "mate $file[1] --line $file[2]"
   `mate $file[1] --line $file[2]`
 else
   mate
