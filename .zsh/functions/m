@@ -1,13 +1,23 @@
-# Usage: m application.rb:123 # open file application.rb, go to line 123
+# Usage:
+#
+#   m
+#     open current directory
+#
+#   m application.rb
+#     open file application.rb
+#
+#   m application.rb:123
+#     open file application.rb, go to line 123
 
-file=$1
-file=("${(s/:/)file}")
+file=$1 || ""
+pieces=("${(s/:/)file}")
 
-echo $file
-if [ "1" == "${#file[*]}" ] ; then
-  `mate $file[1]`
-elif [ "2" = "${#file[*]}" ] ; then
-  `mate $file[1] --line $file[2]`
+if [ -n "$file" ] ; then
+  if [ 1 -eq ${#pieces[@]} ] ; then
+    `mate $pieces[1]`
+  elif [ 2 -eq ${#pieces[@]} ] ; then
+    `mate $pieces[1] --line $pieces[2]`
+  fi
 else
-  mate
+  `mate .`
 fi
