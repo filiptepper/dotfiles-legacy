@@ -1,7 +1,8 @@
-export CUCUMBER_FORMAT="Cucumber::Formatter::Fuubar"
 export EDITOR="mate -w"
 export GREP_OPTIONS="--color=auto"
 export JAVA_HOME=/Library/Java/Home
+export JAVA_OPTS="-d32"
+export MAVEN_OPTS="-Xmx1024Mm -XX:MaxPermSize=256m"
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 setopt auto_cd
@@ -16,4 +17,4 @@ function git_prompt_info() {
   echo "%{$fg[red]%}${ref#refs/heads/}%{$reset_color%} "
 }
 
-PROMPT='%{$fg[yellow]%}%~%{$reset_color%} $(git_prompt_info)%{$reset_color%}%B$%b '
+PROMPT='[%{$fg[yellow]%}%c%{$reset_color%}] $(git_prompt_info)%{$reset_color%}%B$%b '

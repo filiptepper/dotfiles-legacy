@@ -10,7 +10,7 @@ autoload -U ~/.zsh/functions/*(:t)
 
 if [[ -s ~/.zsh/local ]] ; then source ~/.zsh/local ; fi
 
-HISTSIZE=1000
+HISTSIZE=10000
 SAVEHIST=1000
 HISTFILE=~/.history
 setopt APPEND_HISTORY
