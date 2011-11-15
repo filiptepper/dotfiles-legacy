@@ -1,3 +1,5 @@
+alias be="bundle exec"
+
 alias feature="bundle exec cucumber -r features"
 
 alias ga="git archive --format zip --output repository.zip master"
