@@ -1,0 +1,7 @@
+[user]
+  name = Filip Tepper
+  email = filip@tepper.pl
+[color]
+  diff = auto
+  status = auto
+  branch = auto
