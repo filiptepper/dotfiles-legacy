@@ -3,7 +3,8 @@ export GREP_OPTIONS="--color=auto"
 export JAVA_HOME=/Library/Java/Home
 export JAVA_OPTS="-d32"
 export MAVEN_OPTS="-Xmx1024Mm -XX:MaxPermSize=256m"
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin/:$PATH"
+export DYLD_LIBRARY_PATH="/usr/local/mysql/lib/:$DYLD_LIBRARY_PATH"
 
 # Ruby 1.9.3 performance patches
 export RUBY_HEAP_MIN_SLOTS=1000000
