@@ -1,0 +1,16 @@
+# Usage:
+#
+#   e
+#     open current directory
+#
+#   e application.rb
+#     open file application.rb
+#
+#   e application.rb:123
+#     open file application.rb, go to line 123
+
+if [ -n "$1" ] ; then
+  `subl -n $1`
+else
+  `subl -n .`
+fi
