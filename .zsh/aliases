@@ -1,6 +1,12 @@
 alias be="bundle exec"
 
+alias convert-raw="ufraw-batch --compression=90 --exposure=1 --out-type=jpeg --out-path=./jpg ./*.NEF"
+
 alias feature="bundle exec cucumber -r features"
+
+ # =======
+ # = git =
+ # =======
 
 alias ga="git archive --format zip --output repository.zip master"
 alias gb="git branch"
@@ -16,8 +22,17 @@ alias grom="git rebase origin/master"
 alias griom="git rebase -i origin/master"
 alias gs="git status"
 
+ # ========
+ # = grep =
+ # ========
+
+alias grn="grep -rn"
+alias grni="grep -rni"
+
 alias ls="ls -G"
 
 alias td="tail -f ./log/development.log"
 
-show () { mate `bundle show $1` }
+alias www="python -m SimpleHTTPServer"
+
+show () { e "`bundle show $1`" }

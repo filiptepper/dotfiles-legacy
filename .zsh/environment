@@ -1,4 +1,4 @@
-export EDITOR="mate -w"
+export EDITOR="subl -w"
 export GREP_OPTIONS="--color=auto"
 export JAVA_HOME=/Library/Java/Home
 export JAVA_OPTS="-d32"
