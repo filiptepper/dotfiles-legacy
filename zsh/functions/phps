@@ -1,0 +1,15 @@
+# Usage:
+#
+#   phps
+#     start PHP development server
+#
+#   phps 8081
+#     start PHP development server on port 8081
+
+if [ -n "$1" ] ; then
+  port=$1
+else
+  port=8080
+fi
+
+/usr/local/bin/php -S localhost:$port

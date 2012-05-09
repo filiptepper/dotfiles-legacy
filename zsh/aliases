@@ -31,8 +31,6 @@ alias grni="grep -rni"
 
 alias ls="ls -G"
 
-alias phps="/usr/local/bin/php -S localhost:8080"
-
 alias td="tail -f ./log/development.log"
 
 alias www="python -m SimpleHTTPServer"
