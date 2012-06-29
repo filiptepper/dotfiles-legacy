@@ -18,9 +18,7 @@ chflags nohidden ~/Library
 defaults write com.apple.dock launchanim -bool false
 defaults write com.apple.Dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0
-defaults write com.apple.screencapture disable-shadow -bool true
 defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
-defaults write com.apple.Safari ProxiesInBookmarksBar "()"
 defaults write com.apple.Mail DisableReplyAnimations -bool true
 defaults write com.apple.Mail DisableSendAnimations -bool true
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
