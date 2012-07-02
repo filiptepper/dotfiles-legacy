@@ -6,6 +6,7 @@ colorscheme solarized
 set guifont=DejaVu\ Sans\ Mono:h12
 
 set number
+set hls is
 set ts=2 sts=2 sw=2 expandtab
 
 set list
@@ -25,3 +26,8 @@ function! Preserve(command)
 endfunction
 
 autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
