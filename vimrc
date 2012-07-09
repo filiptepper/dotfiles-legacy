@@ -1,8 +1,7 @@
 call pathogen#infect()
 
 syntax enable
-set background=dark
-colorscheme solarized
+colorscheme railscasts
 set guifont=DejaVu\ Sans\ Mono:h12
 
 set number
@@ -31,3 +30,11 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+set nocompatible
+filetype on
+filetype indent on
+filetype plugin on
+
+nmap <C-u> :NERDTreeToggle<CR>
+nnoremap <leader>a :Ack!<space>
