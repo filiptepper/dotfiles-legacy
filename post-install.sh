@@ -24,3 +24,4 @@ defaults write com.apple.Mail DisableSendAnimations -bool true
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 defaults write -g ApplePressAndHoldEnabled -bool false
 hash tmutil &> /dev/null && sudo tmutil disablelocal
+defaults write com.sublimetext.2 ApplePressAndHoldEnabled -bool false
