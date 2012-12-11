@@ -1,8 +1,0 @@
-scmStatus      = false
-showInvisibles = true
-softTabs       = true
-tabSize        = 2
-
-excludeInBrowser      = '{$excludeInBrowser,log,tmp,script}'
-excludeInFileChooser  = '{$excludeInFileChooser,log,tmp,script}'
-excludeInFolderSearch = '{$excludeInFolderSearch,log,tmp,script}'
