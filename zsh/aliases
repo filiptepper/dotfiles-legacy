@@ -4,9 +4,9 @@ alias convert-raw="ufraw-batch --compression=90 --exposure=1 --out-type=jpeg --o
 
 alias feature="bundle exec cucumber -r features"
 
- # =======
- # = git =
- # =======
+# =======
+# = git =
+# =======
 
 alias ga="git archive --format zip --output repository.zip master"
 alias gb="git branch"
@@ -15,7 +15,7 @@ alias gd="git diff --word-diff"
 alias gcm="git commit"
 alias gf="git fetch"
 alias gl="git log --oneline --decorate --graph"
-alias gm="git merge"
+# alias gm="git merge"
 alias gp="git push"
 alias gr="git rebase"
 alias grom="git rebase origin/master"
@@ -23,6 +23,13 @@ alias griom="git rebase -i origin/master"
 alias gs="git status"
 
 alias ios="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
+
+# ==========
+# = heroku =
+# ==========
+
+alias hl="heroku logs --app $1"
+alias hc="heroku run console --app $1"
 
 alias ls="ls -G"
 
