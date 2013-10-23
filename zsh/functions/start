@@ -1,0 +1,22 @@
+# start
+
+case $1 in
+  mysql )
+    mysql.server start
+    ;;
+  postgresql )
+    pg_ctl -D /usr/local/var/postgres -l /tmp/logfile start
+    ;;
+  redis )
+    redis-server /usr/local/etc/redis.conf
+    ;;
+  elasticsearch )
+    elasticsearch -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
+    ;;
+  memcached )
+    memcached -d
+    ;;
+  * )
+    echo 'No service found.'
+    ;;
+esac

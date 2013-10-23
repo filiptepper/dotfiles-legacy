@@ -1,0 +1,16 @@
+# stop
+
+case $1 in
+  mysql )
+    mysql.server stop
+    ;;
+  postgresql )
+    pg_ctl -D /usr/local/var/postgres -l logfile stop
+    ;;
+  redis )
+    redis-cli shutdown
+    ;;
+  * )
+    echo 'No service found.'
+    ;;
+esac
