@@ -13,3 +13,5 @@ HISTFILE=~/.history
 setopt APPEND_HISTORY
 setopt INC_APPEND_HISTORY
 setopt EXTENDED_HISTORY
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
