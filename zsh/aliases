@@ -1,12 +1,8 @@
-alias be="bundle exec"
-
-alias convert-raw="ufraw-batch --compression=90 --exposure=1 --out-type=jpeg --out-path=./ ./*.NEF"
-
-alias feature="bundle exec cucumber -r features"
-
 # =======
 # = git =
 # =======
+
+alias backup="rsync -avx --progress --exclude '.Trashes'"
 
 alias ga="git archive --format zip --output repository.zip master"
 alias gb="git branch"
@@ -37,6 +33,8 @@ alias ls="ls -G"
 
 alias td="tail -f ./log/development.log"
 
-alias www="python -m SimpleHTTPServer"
+alias www="ruby -rwebrick -e's=WEBrick::HTTPServer.new(:Port => 3000, :DocumentRoot => Dir.pwd).start'"
+
+alias z="zeus"
 
 show () { e "`bundle show $1`" }
