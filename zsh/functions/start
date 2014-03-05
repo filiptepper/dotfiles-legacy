@@ -16,6 +16,9 @@ case $1 in
   memcached )
     memcached -d
     ;;
+  mongodb )
+    mongod --fork
+    ;;
   * )
     echo 'No service found.'
     ;;

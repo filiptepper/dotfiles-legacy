@@ -10,6 +10,9 @@ case $1 in
   redis )
     redis-cli shutdown
     ;;
+  mongodb )
+    mongod --shutdown
+    ;;
   * )
     echo 'No service found.'
     ;;
