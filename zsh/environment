@@ -1,6 +1,9 @@
 export EDITOR="subl -w"
 export GREP_OPTIONS="--color=auto"
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/heroku/bin:$PATH"
+
 # export JRUBY_OPTS="-Xcompile.invokedynamic=true -J-server"
 
 setopt auto_cd
