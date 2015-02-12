@@ -1,4 +1,0 @@
-heroku pgbackups:capture --expire --app $1
-curl -o latest.dump `heroku pgbackups:url --app $1`
-pg_restore --verbose --clean --no-acl --no-owner -h localhost -U postgres -d $2 latest.dump
-rm latest.dump
