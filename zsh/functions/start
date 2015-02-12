@@ -11,13 +11,19 @@ case $1 in
     redis-server /usr/local/etc/redis.conf
     ;;
   elasticsearch )
-    elasticsearch -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
+    elasticsearch -d es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
     ;;
   memcached )
     memcached -d
     ;;
   mongodb )
     mongod --fork
+    ;;
+  influxdb )
+    influxdb -config=/usr/local/etc/influxdb.conf
+    ;;
+  neo4j )
+    neo4j start
     ;;
   * )
     echo 'No service found.'

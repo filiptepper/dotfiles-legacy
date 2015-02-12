@@ -13,6 +13,9 @@ case $1 in
   mongodb )
     mongod --shutdown
     ;;
+  neo4j )
+    neo4j stop
+    ;;
   * )
     echo 'No service found.'
     ;;
