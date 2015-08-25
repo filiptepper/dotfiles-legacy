@@ -25,6 +25,15 @@ case $1 in
   neo4j )
     neo4j start
     ;;
+  zookeeper )
+    zkServer start
+    ;;
+  kafka )
+    kafka-server-start.sh /usr/local/etc/kafka/server.properties
+    ;;
+  hadoop )
+    /usr/local/Cellar/hadoop/2.7.0/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.7.0/sbin/start-yarn.sh
+    ;;
   * )
     echo 'No service found.'
     ;;

@@ -4,14 +4,16 @@ autoload -U ~/.zsh/functions/*(:t)
 . ~/.zsh/environment
 . ~/.zsh/aliases
 . ~/.zsh/completion
+. ~/.env/private
 
 if [[ -s ~/.zsh/local ]] ; then source ~/.zsh/local ; fi
 
 HISTSIZE=10000
-SAVEHIST=1000
+SAVEHIST=10000
 HISTFILE=~/.history
 setopt APPEND_HISTORY
 setopt INC_APPEND_HISTORY
 setopt EXTENDED_HISTORY
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi

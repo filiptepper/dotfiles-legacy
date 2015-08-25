@@ -7,7 +7,7 @@ alias backup="rsync -avx --progress --exclude '.Trashes'"
 alias ga="git archive --format zip --output repository.zip master"
 alias gb="git branch"
 alias gc="git checkout"
-alias gd="git diff --word-diff"
+alias gd="git diff --word-diff -w --word-diff=color"
 alias gcm="git commit"
 alias gf="git fetch"
 alias gl="git log --oneline --decorate --graph"
@@ -16,25 +16,14 @@ alias gp="git push"
 alias gr="git rebase"
 alias grom="git rebase origin/master"
 alias griom="git rebase -i origin/master"
-alias gs="git status"
+alias gs="git status -u"
 
-alias iphone="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app --args -SimulateDevice iPhone"
-alias iphone5="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app --args -SimulateDevice 'iPhone (Retina 4-inch)'"
-alias ipad="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app --args -SimulateDevice iPad"
-
-# ==========
-# = heroku =
-# ==========
-
-alias hl="heroku logs --app $1"
-alias hc="heroku run console --app $1"
+alias json='python -m json.tool'
 
 alias ls="ls -G"
 
 alias td="tail -f ./log/development.log"
 
 alias www="ruby -rwebrick -e's=WEBrick::HTTPServer.new(:Port => 3000, :DocumentRoot => Dir.pwd).start'"
-
-alias z="zeus"
 
 show () { e "`bundle show $1`" }

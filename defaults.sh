@@ -20,15 +20,22 @@ defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool 
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 defaults write -g ApplePressAndHoldEnabled -bool false
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 defaults write com.apple.terminal StringEncodings -array 4
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
 chflags nohidden ~/Library
+
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true
 defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
@@ -43,3 +50,6 @@ killall Finder
 
 sudo pmset -a hibernatemode 0
 sudo rm /var/vm/sleepimage
+systemsetup -setcomputersleep Off > /dev/null
+
+sudo pmset -a sms 0
