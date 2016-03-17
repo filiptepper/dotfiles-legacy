@@ -53,3 +53,5 @@ sudo rm /var/vm/sleepimage
 systemsetup -setcomputersleep Off > /dev/null
 
 sudo pmset -a sms 0
+
+sudo tmutil disablelocal

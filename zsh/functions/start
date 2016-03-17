@@ -11,7 +11,7 @@ case $1 in
     redis-server /usr/local/etc/redis.conf
     ;;
   elasticsearch )
-    elasticsearch -d es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
+    elasticsearch -d -p /usr/local/var/run/elasticsearch.pid es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
     ;;
   memcached )
     memcached -d
@@ -33,6 +33,9 @@ case $1 in
     ;;
   hadoop )
     /usr/local/Cellar/hadoop/2.7.0/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.7.0/sbin/start-yarn.sh
+    ;;
+  dynamodb )
+    /usr/local/bin/dynamodb-local
     ;;
   * )
     echo 'No service found.'

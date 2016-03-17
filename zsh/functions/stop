@@ -10,6 +10,9 @@ case $1 in
   redis )
     redis-cli shutdown
     ;;
+  elasticsearch )
+    kill -SIGTERM `cat /usr/local/var/run/elasticsearch.pid`
+    ;;
   mongodb )
     mongod --shutdown
     ;;

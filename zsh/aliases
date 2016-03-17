@@ -27,3 +27,7 @@ alias td="tail -f ./log/development.log"
 alias www="ruby -rwebrick -e's=WEBrick::HTTPServer.new(:Port => 3000, :DocumentRoot => Dir.pwd).start'"
 
 show () { e "`bundle show $1`" }
+
+alias flush-dns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
+
+alias fs="foreman start --env .env,.env.local"
