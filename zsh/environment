@@ -3,7 +3,7 @@ export GREP_OPTIONS="--color=auto"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export PATH="./node_modules/.bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/heroku/bin:$PATH"
-export SSL_CERT_FILE=/usr/local/etc/openssl/certs/cacert.pem
+# export SSL_CERT_FILE=/usr/local/etc/openssl/certs/cacert.pem
 export GOPATH=/Users/filiptepper/.golang
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
@@ -13,6 +13,8 @@ export SPARK_HOME=$(brew --prefix apache-spark)
 export SIMPLECOV=0
 export JRUBY_OPTS="--dev -J-noverify"
 export TEXT_FILE_LOGGING=1
+
+eval "$(docker-machine env default)"
 
 # export JRUBY_OPTS="-Xcompile.invokedynamic=true -J-server"
 
@@ -30,4 +32,3 @@ function git_prompt_info() {
 
 PROMPT='%{$fg[yellow]%}λ %{$fg[green]%}%c %{$fg[yellow]%}$(git_prompt_info)$%{$reset_color%} '
 
-eval "$(dhyve env)"
