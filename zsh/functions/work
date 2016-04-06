@@ -6,7 +6,7 @@ if [ ! -e "/usr/local/etc/dnsmasq.conf" ]; then
   brew install dnsmasq
 
   ln -s ~/.dotfiles/etc/dnsmasq.conf /usr/local/etc/dnsmasq.conf
-  cp ~/.dotfiles/etc/homebrew.mxcl.dnsmasq.plist /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist
+  sudo cp ~/.dotfiles/etc/homebrew.mxcl.dnsmasq.plist /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist
   sudo chmod 600 /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist
 fi
 
