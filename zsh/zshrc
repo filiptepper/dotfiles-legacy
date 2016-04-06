@@ -4,9 +4,6 @@ autoload -U ~/.zsh/functions/*(:t)
 . ~/.zsh/environment
 . ~/.zsh/aliases
 . ~/.zsh/completion
-if [ -f "~/.env/private" ]; then
-  . ~/.env/private
-fi
 
 if [[ -s ~/.zsh/local ]] ; then source ~/.zsh/local ; fi
 
