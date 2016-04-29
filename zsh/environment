@@ -9,6 +9,7 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export SIMPLECOV=0
 export TEXT_FILE_LOGGING=1
+export HOMEBREW_NO_ANALYTICS=1
 
 setopt auto_cd
 setopt prompt_subst
