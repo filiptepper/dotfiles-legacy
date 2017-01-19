@@ -5,7 +5,7 @@ autoload -U ~/.zsh/functions/*(:t)
 . ~/.zsh/aliases
 . ~/.zsh/completion
 
-if [[ -s ~/.zsh/local ]] ; then source ~/.zsh/local ; fi
+if [[ -f ~/.zsh/local ]] ; then source ~/.zsh/local ; fi
 
 HISTSIZE=10000
 SAVEHIST=10000
@@ -17,3 +17,4 @@ setopt no_global_rcs
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
