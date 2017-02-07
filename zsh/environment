@@ -2,8 +2,9 @@ export EDITOR="/usr/local/bin/subl -w"
 export GREP_OPTIONS="--color=auto"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export GOPATH=/Users/filiptepper/.golang
+export GOPATH="/Users/filiptepper/.golang:/Users/filiptepper/Projects/go"
+export PATH="/usr/local/bin:/usr/local/sbin:/Users/filiptepper/.golang/bin:/Users/filiptepper/Projects/go/bin:$PATH"
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
@@ -11,7 +12,6 @@ export SIMPLECOV=0
 export TEXT_FILE_LOGGING=1
 export HOMEBREW_NO_ANALYTICS=1
 export ANSIBLE_HOST_KEY_CHECKING=false
-export GOPATH="/Users/filiptepper/.golang:/Users/filiptepper/Projects/go"
 
 setopt auto_cd
 setopt prompt_subst
