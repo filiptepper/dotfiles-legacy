@@ -3,8 +3,8 @@ export GREP_OPTIONS="--color=auto"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export GOPATH=/Users/filiptepper/.golang
-export GOPATH="/Users/filiptepper/.golang:/Users/filiptepper/Projects/go"
-export PATH="/usr/local/bin:/usr/local/sbin:/Users/filiptepper/.golang/bin:/Users/filiptepper/Projects/go/bin:$PATH"
+export GOPATH="/Users/filiptepper/.golang:/Users/filiptepper/Code/go"
+export PATH="/usr/local/bin:/usr/local/sbin:/Users/filiptepper/.golang/bin:/Users/filiptepper/Code/go/bin:$PATH"
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
