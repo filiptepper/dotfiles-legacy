@@ -6,6 +6,7 @@ autoload -U ~/.zsh/functions/*(:t)
 . ~/.zsh/completion
 
 if [[ -f ~/.zsh/local ]] ; then source ~/.zsh/local ; fi
+source ~/.zsh/docker
 
 HISTSIZE=10000
 SAVEHIST=10000
