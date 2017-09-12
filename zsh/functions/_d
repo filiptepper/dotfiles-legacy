@@ -1,2 +1,2 @@
-#compdef c
+#compdef d
 _files -W ~/Code/docker-development/repos/ -/
