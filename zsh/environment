@@ -8,6 +8,7 @@ export PATH="/usr/local/bin:/usr/local/sbin:/Users/filiptepper/.golang/bin:/User
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:/Users/filiptepper/Library/Python/2.7/bin
 export SIMPLECOV=0
 export TEXT_FILE_LOGGING=1
 export HOMEBREW_NO_ANALYTICS=1
