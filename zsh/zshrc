@@ -6,7 +6,7 @@ autoload -U ~/.zsh/functions/*(:t)
 . ~/.zsh/completion
 
 if [[ -f ~/.zsh/local ]] ; then source ~/.zsh/local ; fi
-source ~/.zsh/docker
+if [[ -f ~/.profile ]] ; then source ~/.profile ; fi
 
 HISTSIZE=10000
 SAVEHIST=10000
@@ -21,4 +21,4 @@ eval "$(rbenv init -)"
 # eval "$(pyenv virtualenv-init -)"
 
 export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+. "/usr/local/opt/nvm/nvm.sh" --no-use
