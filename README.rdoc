@@ -1,9 +1,0 @@
-= Filip Tepper's .dotfiles
-
-Not much here. I like it plain and simple.
-
-== Installation
-
-  git clone git://github.com/filiptepper/dotfiles ~/.dotfiles
-  cd ~/.dotfiles
-  rake
