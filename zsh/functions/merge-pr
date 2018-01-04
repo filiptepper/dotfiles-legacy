@@ -1,5 +1,0 @@
-git checkout master
-git merge $1
-git branch -d $1
-git push origin :$1
-git push origin master
