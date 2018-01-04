@@ -1,9 +1,0 @@
-STATUS=$(docker-machine status dinghy)
-
-if [ "$STATUS" = "Stopped" ]; then
-  echo "Starting dinghy..."
-  docker-machine start dinghy &>/dev/null
-fi
-
-STARTUP=`dinghy env`
-eval ${STARTUP}

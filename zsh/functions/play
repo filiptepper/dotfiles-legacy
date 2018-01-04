@@ -1,3 +1,0 @@
-#!/bin/bash
-
-sudo kill -9 `ps aux | grep "/usr/local/etc/dnsmasq.conf"| grep -v "grep" | awk '{ print $2 }'`
