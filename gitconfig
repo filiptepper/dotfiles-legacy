@@ -1,6 +1,6 @@
 [user]
-  name = Filip Tepper
-  email = filip@tepper.pl
+	name = Filip Tepper
+	email = filip@tepper.pl
 [color]
   diff = auto
   status = auto
@@ -8,9 +8,10 @@
 [push]
   default = current
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 	required = true
+	process = git-lfs filter-process
 [alias]
   prune = fetch --prune
   undo = reset --soft HEAD^
