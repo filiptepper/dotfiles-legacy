@@ -17,8 +17,9 @@ setopt EXTENDED_HISTORY
 setopt no_global_rcs
 
 eval "$(rbenv init -)"
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
 
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh" --no-use
+#export PROJECT_HOME="$HOME/Code"
+#source /usr/local/bin/virtualenvwrapper.sh
+
+#export NVM_DIR="$HOME/.nvm"
+#. "/usr/local/opt/nvm/nvm.sh" --no-use
