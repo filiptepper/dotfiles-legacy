@@ -28,3 +28,5 @@ function git_prompt_info() {
 }
 
 PROMPT='%{$fg[green]%}%c %{$fg[yellow]%}$(git_prompt_info)%{$fg[yellow]%}$%{$reset_color%} '
+
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
