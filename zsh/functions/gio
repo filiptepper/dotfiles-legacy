@@ -1,0 +1,1 @@
+open "https://github.com/castle/$1/issues/$2"
