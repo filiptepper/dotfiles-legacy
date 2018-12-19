@@ -17,3 +17,7 @@
   undo = reset --soft HEAD^
   stash-all = stash save --include-untracked
 [core]
+[github]
+	user = filiptepper
+[ghi]
+	token = !security find-internet-password -a filiptepper -s github.com -l 'ghi token' -w
