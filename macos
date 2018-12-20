@@ -1,0 +1,321 @@
+#!/usr/bin/env bash
+
+# https://github.com/mathiasbynens/dotfiles/blob/master/.macos
+
+osascript -e 'tell application "System Preferences" to quit'
+
+sudo -v
+
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+# dock
+defaults write com.apple.dock tilesize -int 16
+defaults write com.apple.dock persistent-apps -array
+defaults write com.apple.dock dashboard-in-overlay -bool true
+defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock orientation -string bottom
+defaults write com.apple.dock show-recents -bool false
+
+# hide menu bar
+defaults write NSGlobalDomain _HIHideMenuBar -bool true
+
+# font smoothing
+defaults write NSGlobalDomain AppleFontSmoothing -int 2
+
+# utf-8 in terminal
+defaults write com.apple.terminal StringEncodings -array 4
+
+# enable highlight hover effect for the grid view of a stack (Dock)
+defaults write com.apple.dock mouse-over-hilite-stack -bool true
+
+# wipe all (default) app icons from the Dock
+defaults write com.apple.dock persistent-apps -array
+
+# show only open applications in the Dock
+defaults write com.apple.dock static-only -bool true
+
+# don’t animate opening applications from the Dock
+defaults write com.apple.dock launchanim -bool false
+
+# Safari.app
+
+# do not send data to Apple
+defaults write com.apple.Safari UniversalSearchEnabled -bool false
+defaults write com.apple.Safari SuppressSearchSuggestions -bool true
+
+# show full address
+defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+
+# default to about:blank
+defaults write com.apple.Safari HomePage -string "about:blank"
+
+# do not open downloads
+defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
+
+# browser back with backspace
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool true
+
+# show favorites bar
+defaults write com.apple.Safari ShowFavoritesBar -bool true
+
+# disable thumbnail cache
+defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
+
+# enable debug menu
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+
+# remove icons in bookmarks bar
+defaults write com.apple.Safari ProxiesInBookmarksBar "()"
+
+# develop menu
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+
+# Disable auto-playing video
+defaults write com.apple.Safari WebKitMediaPlaybackAllowsInline -bool false
+defaults write com.apple.SafariTechnologyPreview WebKitMediaPlaybackAllowsInline -bool false
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2AllowsInlineMediaPlayback -bool false
+defaults write com.apple.SafariTechnologyPreview com.apple.Safari.ContentPageGroupIdentifier.WebKit2AllowsInlineMediaPlayback -bool false
+
+# enable web inspector in web views
+defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+# enable “Do Not Track”
+defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
+
+# update extensions automatically
+defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
+
+# Mail.app
+
+# copy only e-mail address
+defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+
+# do not display threads
+defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreadedMode" -string "no"
+
+# Spotlight
+
+# do not index /Volumes
+sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
+
+# default save local files to disk
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+# disable dashboard
+defaults write com.apple.dashboard mcx-disabled -bool true
+
+# enable hidpi modes
+sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
+
+# immediately ask for password
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+# disable autocorrect
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# enable key repeat
+defaults write -g ApplePressAndHoldEnabled -bool false
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
+
+# ctrl + scroll zoom
+defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
+
+# full keyboard access
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+# enable tap on login screen
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# disable resume
+defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
+
+# do not terminate inactive apps
+defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
+
+# do not ask if I want to run the app
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+# expand save panel
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
+# expand print panel
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+
+# quit printer app when printing is done
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+
+# disable Photos opening on iPhone connection
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+# show host details on login screen
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
+# disable animations
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+defaults write -g QLPanelAnimationDuration -float 0
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+defaults write com.apple.finder DisableAllAnimations -bool true
+defaults write com.apple.dock expose-animation-duration -float 0.1
+defaults write com.apple.mail DisableReplyAnimations -bool true
+defaults write com.apple.mail DisableSendAnimations -bool true
+defaults write NSGlobalDomain NSUseAnimatedFocusRing -bool false
+
+# disable shadows in screenshots
+defaults write com.apple.screencapture disable-shadow -bool true
+
+# disable transparency
+defaults write com.apple.universalaccess reduceTransparency -bool true
+defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
+
+# disable boot sounds
+sudo nvram SystemAudioVolume=" "
+
+# disable smart quotes
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+
+# disable smart dashes
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+# Time Machine.app
+
+# don't ask for new drives
+defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+
+# disable local time machine
+hash tmutil &> /dev/null && sudo tmutil disablelocal
+
+# Finder.app
+
+# keep folders on top when sorting by name
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
+# remove the spring loading delay for directories
+defaults write NSGlobalDomain com.apple.springing.delay -float 0
+
+# default to desktop
+defaults write com.apple.finder NewWindowTarget -string "PfDe"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Desktop/"
+
+# do not show media on desktop
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
+
+# show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# show path bar
+defaults write com.apple.finder ShowPathbar -bool true
+
+# show path in title
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
+# do not warn when changing extensions
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# search in current folder by default
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+# do not write .DS_Store to network or USB stores
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
+# do not verify disk images
+defaults write com.apple.frameworks.diskimages skip-verify -bool true
+defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
+defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
+
+# Messages.app
+
+# disable smart quotes
+defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
+
+# disable spell checking
+defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false
+
+# reveal IP address, hostname, OS version, etc. when clicking the clock
+# in the login window
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
+# enable Secure Keyboard Entry in Terminal.app
+# see: https://security.stackexchange.com/a/47786/8918
+defaults write com.apple.terminal SecureKeyboardEntry -bool true
+
+# disable the annoying line marks
+defaults write com.apple.Terminal ShowLineMarks -int 0
+
+# auto-play videos when opened with QuickTime Player
+defaults write com.apple.QuickTimePlayerX MGPlayMovieOnOpen -bool true
+
+# increase sound quality for Bluetooth headphones/headsets
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+
+# enable the automatic update check
+defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
+
+# download newly available updates in background
+defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
+
+# turn on app auto-update
+defaults write com.apple.commerce AutoUpdate -bool true
+
+# always show ~/Library
+chflags nohidden ~/Library
+
+# always show /Volumes
+sudo chflags nohidden /Volumes
+
+# disable sleep
+systemsetup -setcomputersleep Off > /dev/null
+
+# disable hibernation
+sudo pmset -a hibernatemode 0
+
+if [ -f "/var/vm/sleepimage" ]; then
+  sudo rm /var/vm/sleepimage
+  sudo touch /private/var/vm/sleepimage
+  sudo chflags uchg /private/var/vm/sleepimage
+fi
+
+# disable motion sensor for ssd
+sudo pmset -a sms 0
+
+# security
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.captive.control Active -bool false
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsigned off
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsignedapp off
+sudo pkill -HUP socketfilterfw
+
+for app in "Activity Monitor" \
+  "Address Book" \
+  "Calendar" \
+  "Contacts" \
+  "Dock" \
+  "Finder" \
+  "Mail" \
+  "Messages" \
+  "Photos" \
+  "Safari" \
+  "SystemUIServer" \
+  "Terminal" \
+  "iCal"; do
+  killall "${app}" &> /dev/null
+done
+
+echo "Done. Note that some of these changes require a logout/restart to take effect."
