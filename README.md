@@ -1,7 +1,7 @@
 # .dotfiles
 
 ```bash
-git clone git://github.com/filiptepper/dotfiles ~/.dotfiles
+git clone --recurse-submodules git://github.com/filiptepper/dotfiles ~/.dotfiles
 cd ~/.dotfiles
 rake
 ```
